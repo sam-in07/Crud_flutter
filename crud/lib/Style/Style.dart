@@ -9,7 +9,7 @@ const colorgreen = Color.fromRGBO(31, 231, 28, 1.0);
 const colorwhite = Color.fromRGBO(255, 255 , 255 , 1);
 
 
-InputDecoration AppInputDecoration()  {
+InputDecoration AppInputDecoration(label)  {
   return InputDecoration(
     focusedBorder: const OutlineInputBorder(
        borderSide: const BorderSide(color: colorgreen,width: 1)
@@ -17,7 +17,11 @@ InputDecoration AppInputDecoration()  {
     fillColor: colorwhite,
     filled: true,
     contentPadding: EdgeInsets.fromLTRB(20, 10, 10, 20),
-
+    enabledBorder:const OutlineInputBorder(
+        borderSide: const BorderSide(color: colorgreen,width: 1)
+    ),
+  border: OutlineInputBorder(),
+  labelText:  label
         
   );
 }

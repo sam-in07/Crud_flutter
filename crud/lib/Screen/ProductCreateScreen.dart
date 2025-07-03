@@ -1,4 +1,5 @@
 
+import 'package:crud/Style/Style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,16 +17,49 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
       appBar: AppBar(title:  Text('Create Product'),),
       body: Stack(
            children: [
+             // background grapchics
              Container(
                child: (SingleChildScrollView (
                  padding: EdgeInsets.all(20),
                  child: Column(
                    children: [
-                      TextFormField(onChanged: (value){}),
-                      TextFormField(onChanged: (value){}),
-                      TextFormField(onChanged: (value){}),
-                      TextFormField(onChanged: (value){}),
-                      TextFormField(onChanged: (value){}),
+                      TextFormField(onChanged: (value){
+
+                      },
+                        decoration: AppInputDecoration('Product name '),
+
+                      ),
+                      SizedBox(height: 20,),
+                      //akekta line mjhe space ar jonno
+                      TextFormField(onChanged: (value){
+
+                      },
+                        decoration: AppInputDecoration('Product Image '),
+
+                      ),
+                     SizedBox(height: 20,),
+                      TextFormField(onChanged: (value){
+
+                      },
+                        decoration: AppInputDecoration('Product Unit prizze '),
+
+                      ),
+                     SizedBox(height: 20,),
+                      TextFormField(onChanged: (value){
+
+                      },
+                        decoration: AppInputDecoration('Product code  '),
+
+                      ),
+                     SizedBox(height: 20,),
+                      TextFormField(onChanged: (value){
+
+
+                      },
+                        decoration: AppInputDecoration('Product total prize  '),
+
+                      ),
+
                    ],
                  ),
                )),
