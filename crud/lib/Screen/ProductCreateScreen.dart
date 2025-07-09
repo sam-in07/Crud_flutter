@@ -58,7 +58,18 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
                       },
                         decoration: AppInputDecoration('Product total prize  '),
 
-                      ),
+                      ) ,
+                     // upur nicher jonoo
+
+                     DropdownButton(
+                         items: [
+                           
+                         ]
+
+                         , onChanged: (value) {
+
+                     }
+                     )
 
                    ],
                  ),
