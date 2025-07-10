@@ -17,6 +17,7 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
       appBar: AppBar(title:  Text('Create Product'),),
       body: Stack(
            children: [
+             ScreenBackground(context),
              // background grapchics
              Container(
                child: (SingleChildScrollView (
@@ -60,16 +61,26 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
 
                       ) ,
                      // upur nicher jonoo
+                     SizedBox(height: 20,),
 
-                     DropdownButton(
-                         items: [
-                           
-                         ]
+                     Appdropdownstyle(
+                         DropdownButton(
+                             items: [
+                               DropdownMenuItem(child: Text('select qt') , value: '',),
+                               DropdownMenuItem(child: Text('1 pis ') , value: '1 pis',) ,
+                               DropdownMenuItem(child: Text('2 pis') , value: '2 pis ',),
+                               DropdownMenuItem(child: Text(' 3 pis ') , value: '3 pis ',),
+                               DropdownMenuItem(child: Text('4 pis') , value: '4 pis ',),
+                               DropdownMenuItem(child: Text('5 pis ') , value: '5 piss',),
+                             ]
 
-                         , onChanged: (value) {
+                             , onChanged: (value) {
 
-                     }
+                         }
+                         )
+
                      )
+
 
                    ],
                  ),
