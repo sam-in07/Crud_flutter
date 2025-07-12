@@ -6,10 +6,28 @@ import 'package:flutter/material.dart';
 class ProductCretationScreen extends StatefulWidget  {
   @override
   State<ProductCretationScreen> createState()  => _ProductCretationScreen ();
-
 }
 // view ney kaj kore
 class _ProductCretationScreen  extends State<ProductCretationScreen>{
+  //api modhe key & val 2 tai string
+  Map<String,String> FormValues = {
+       "Img" : "",
+       "Productcode" : "",
+       "ProductName" : "",
+       "Qty" : "",
+       "TotalPrice" : "",
+       "UniPrice" : "",
+  } ;
+
+  //ak func sob kaj korbo
+  Inputonchnage( Mapkey , Textvalue ){
+     setState(() {
+       //FormValues  property gulake updte korbo
+       FormValues.update(Mapkey, (Textvalue)>=null) ;
+     });
+  }
+
+
   @override
   Widget build(BuildContext context) {
 
@@ -24,8 +42,9 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
                  padding: EdgeInsets.all(20),
                  child: Column(
                    children: [
-                      TextFormField(onChanged: (value){
-
+                      TextFormField(onChanged: (Textvalue){
+                       Inputonchnage("ProductName" , Textvalue ) ;
+                        // 2 ta jinis key & value
                       },
                         decoration: AppInputDecoration('Product name '),
 
