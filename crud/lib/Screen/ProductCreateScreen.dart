@@ -61,10 +61,12 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
 
                       ) ,
                      // upur nicher jonoo
-                     SizedBox(height: 20,),
+                     SizedBox(height: 20),
 
                      Appdropdownstyle(
+
                          DropdownButton(
+                             value: "",
                              items: [
                                DropdownMenuItem(child: Text('select qt') , value: '',),
                                DropdownMenuItem(child: Text('1 pis ') , value: '1 pis',) ,
@@ -76,12 +78,30 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
 
                              , onChanged: (value) {
 
-                         }
+                         } ,
+                            underline: Container() ,
+                            isExpanded: true,
+                            //x exix borabor expends hoi jabe
+                           
                          )
 
+                     ),
+
+                     SizedBox(height: 20),
+                     // buttton ta left to right pura space ta nibe Container dey shape 
+                     Container(
+                       child: ElevatedButton(
+                           style: AppButtonstyle(),
+                           onPressed: (
+
+                           ) {
+
+                           },
+                          // child: Text("submit")),
+                           child: SuccessButtonChild("submit")),
+                          // SuccessButtonChild vitore akta  pura button ar design ase
+                       
                      )
-
-
                    ],
                  ),
                )),

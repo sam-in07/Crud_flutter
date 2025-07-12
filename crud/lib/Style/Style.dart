@@ -57,3 +57,36 @@ DecoratedBox Appdropdownstyle(child) {
   );
 }
 
+
+
+ButtonStyle AppButtonstyle()  {
+  return ElevatedButton.styleFrom(
+    elevation: 1,
+    padding: EdgeInsets.all(0),
+    backgroundColor: Colors.transparent,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)) ,
+  );
+}
+
+//INK decoration conainter
+Ink SuccessButtonChild (Buttontext) {
+  return Ink(
+    decoration: BoxDecoration(
+      color: colorgreen,
+      borderRadius: BorderRadius.circular(6),
+    ),
+    child: Container(
+      height: 45,
+      alignment: Alignment.center,
+      child: Text(Buttontext , style : TextStyle(
+        fontWeight: FontWeight.w400,
+        fontSize: 15,
+      )
+
+      ),
+    ),
+  );
+}
+
+
+
