@@ -51,30 +51,33 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
                       ),
                       SizedBox(height: 20,),
                       //akekta line mjhe space ar jonno
-                      TextFormField(onChanged: (value){
-
+                      TextFormField(onChanged:  (Textvalue){
+                        Inputonchnage("Produc IMG " , Textvalue ) ;
+                        // 2 ta jinis key & value
                       },
                         decoration: AppInputDecoration('Product Image '),
 
                       ),
                      SizedBox(height: 20,),
-                      TextFormField(onChanged: (value){
-
+                      TextFormField(onChanged:  (Textvalue){
+                        Inputonchnage("Product unit" , Textvalue ) ;
+                        // 2 ta jinis key & value
                       },
                         decoration: AppInputDecoration('Product Unit prizze '),
 
                       ),
                      SizedBox(height: 20,),
-                      TextFormField(onChanged: (value){
-
+                      TextFormField(onChanged:  (Textvalue){
+                        Inputonchnage("Product Code " , Textvalue ) ;
+                        // 2 ta jinis key & value
                       },
                         decoration: AppInputDecoration('Product code  '),
 
                       ),
                      SizedBox(height: 20,),
-                      TextFormField(onChanged: (value){
-
-
+                      TextFormField(onChanged:  (Textvalue){
+                        Inputonchnage("Product total prize" , Textvalue ) ;
+                        // 2 ta jinis key & value
                       },
                         decoration: AppInputDecoration('Product total prize  '),
 
@@ -85,7 +88,7 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
                      Appdropdownstyle(
 
                          DropdownButton(
-                             value: "",
+                             value: FormValues['Qty'],
                              items: [
                                DropdownMenuItem(child: Text('select qt') , value: '',),
                                DropdownMenuItem(child: Text('1 pis ') , value: '1 pis',) ,
@@ -95,9 +98,10 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
                                DropdownMenuItem(child: Text('5 pis ') , value: '5 piss',),
                              ]
 
-                             , onChanged: (value) {
-
-                         } ,
+                             , onChanged:  (Textvalue){
+                           Inputonchnage("Qty" , Textvalue ) ;
+                           // 2 ta jinis key & value
+                         },
                             underline: Container() ,
                             isExpanded: true,
                             //x exix borabor expends hoi jabe
