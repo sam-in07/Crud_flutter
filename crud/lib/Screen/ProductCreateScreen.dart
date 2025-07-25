@@ -23,11 +23,39 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
   Inputonchnage( Mapkey , Textvalue ){
      setState(() {
        //FormValues  property gulake updte korbo
-       FormValues.update(Mapkey, (Textvalue)>=null) ;
+      // FormValues.update(Mapkey, (Textvalue)>=null) ;
+
+       FormValues.update(Mapkey, (value) => Textvalue) ;
+
+
      });
   }
 
+  FormOnsubmit() {
+        if(FormValues['Img']!.length==0) {
+                   ErrorTost("no image found ");
+        }
+        else if(FormValues['Productcode']!.length==0) {
+          ErrorTost("no product  found ");
 
+        } else if(FormValues['ProductName']!.length==0) {
+          ErrorTost(" ProductName needded ");
+
+        } else if(FormValues['Qty']!.length==0) {
+          ErrorTost(" ProductName Qty !! ");
+        } else if(FormValues['TotalPrice']!.length==0) {
+          ErrorTost(" ProductName priceeeee!!1 ");
+        } else if(FormValues['UniPrice']!.length==0) {
+          ErrorTost(" ProductName UniPrice needded ");
+        }
+        // } if(FormValues['Img']!.length==0) {
+        //
+        // } if(FormValues['Img']!.length==0) {
+        //
+        // } if(FormValues['Img']!.length==0) {
+        //
+        // }
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -115,10 +143,8 @@ class _ProductCretationScreen  extends State<ProductCretationScreen>{
                      Container(
                        child: ElevatedButton(
                            style: AppButtonstyle(),
-                           onPressed: (
-
-                           ) {
-
+                           onPressed: () {
+                               FormOnsubmit();
                            },
                           // child: Text("submit")),
                            child: SuccessButtonChild("submit")),
